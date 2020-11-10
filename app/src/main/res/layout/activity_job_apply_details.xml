@@ -13,6 +13,23 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         >
+        <RelativeLayout
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/blue_900"
+            >
+
+            <TextView
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:textSize="20dp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:textStyle="bold"
+                android:layout_centerInParent="true"
+                android:text="JOB APPROVE/REJECT"
+                android:textColor="#FFFFFF"></TextView></RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"

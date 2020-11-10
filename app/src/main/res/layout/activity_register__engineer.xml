@@ -45,6 +45,7 @@
                 android:layout_marginTop="@dimen/_25sdp">
 
                 <ImageView
+                    android:tint="@color/white"
                     android:layout_marginTop="@dimen/_14sdp"
                     android:src="@drawable/user"
                     android:layout_width="@dimen/_20sdp"
@@ -59,7 +60,7 @@
                     >
 
                     <EditText
-                        android:textSize="@dimen/_13sdp"
+                        android:textSize="@dimen/_15sdp"
                         android:textColor="@color/white"
                         android:imeOptions="actionDone"
                         android:maxLines="1"
@@ -84,6 +85,7 @@
 
 
                 <ImageView
+                    android:tint="@color/white"
                     android:layout_marginTop="@dimen/_14sdp"
                     android:src="@drawable/cellphone"
                     android:layout_width="@dimen/_20sdp"
@@ -98,7 +100,7 @@
                     >
 
                     <EditText
-                        android:textSize="@dimen/_13sdp"
+                        android:textSize="@dimen/_15sdp"
                         android:textColor="@color/white"
                         android:imeOptions="actionDone"
                         android:maxLines="1"
@@ -123,6 +125,7 @@
                 android:layout_height="wrap_content"
                 >
                 <ImageView
+                    android:tint="@color/white"
                     android:layout_marginTop="@dimen/_14sdp"
                     android:src="@drawable/key"
                     android:layout_width="@dimen/_20sdp"
@@ -137,7 +140,7 @@
                     app:passwordToggleEnabled="true">
 
                     <EditText
-                        android:textSize="@dimen/_13sdp"
+                        android:textSize="@dimen/_15sdp"
                         android:textColor="@color/white"
                         android:imeOptions="actionDone"
                         android:maxLines="1"
@@ -162,6 +165,7 @@
                 >
 
                 <ImageView
+                    android:tint="@color/white"
                     android:layout_marginTop="@dimen/_14sdp"
                     android:src="@drawable/key"
                     android:layout_width="@dimen/_20sdp"
@@ -176,7 +180,7 @@
 
 
                     <EditText
-                        android:textSize="@dimen/_13sdp"
+                        android:textSize="@dimen/_15sdp"
                         android:textColor="@color/white"
                         android:imeOptions="actionDone"
                         android:maxLines="1"
@@ -200,6 +204,7 @@
                 android:layout_marginTop="@dimen/md_25">
 
                 <ImageView
+                    android:tint="@color/white"
                     android:layout_marginTop="@dimen/_14sdp"
                     android:src="@drawable/user"
                     android:layout_width="@dimen/_20sdp"
@@ -214,7 +219,7 @@
                     >
 
                     <EditText
-                        android:textSize="@dimen/_13sdp"
+                        android:textSize="@dimen/_15sdp"
                         android:textColor="@color/white"
                         android:imeOptions="actionDone"
                         android:maxLines="1"
@@ -235,6 +240,7 @@
                 android:layout_marginTop="@dimen/md_25">
 
                 <ImageView
+                    android:tint="@color/white"
                     android:layout_marginTop="@dimen/_14sdp"
                     android:src="@drawable/user"
                     android:layout_width="@dimen/_20sdp"
@@ -249,7 +255,7 @@
                     >
 
                     <EditText
-                        android:textSize="@dimen/_13sdp"
+                        android:textSize="@dimen/_15sdp"
                         android:textColor="@color/white"
                         android:imeOptions="actionDone"
                         android:maxLines="1"
@@ -273,8 +279,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/_25sdp"
-            android:background="@drawable/capsulebutton"
+            android:background="@drawable/gradient"
             android:text="@string/signup"
+            android:textStyle="bold"
             android:textSize="@dimen/_15sdp"
             android:textColor="#ffffff"></Button>
 
@@ -302,9 +309,8 @@
                 android:id="@+id/engineerexit"
                 android:text="@string/existinguser"
                 android:textStyle="bold"
-                android:textSize="@dimen/_14sdp"
+                android:textSize="@dimen/_15sdp"
                 android:textColor="@color/red_900"
-
                 />
 
         </LinearLayout>

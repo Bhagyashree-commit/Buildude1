@@ -43,7 +43,13 @@
 द्वारा प्रस्तुत
 </string>
 
-
+    <string name="contractormain">ठेकेदार</string>
+    <string name="labormain">मज़दूर</string>
+    <string name="architectmain">वास्तुकार</string>
+    <string name="engineermain">इंजीनियर</string>
+    <string name="developermain">
+डेवलपर</string>
+    <string name="owenermain">मालिक</string>
 
 
     <string name="click">लॉगिन / पंजीकरण के लिए नीचे क्लिक करें</string>
@@ -62,7 +68,7 @@
 वाह, कृपया फिर से आएं जब आपको इसकी आवश्यकता हो और अनुमति प्रदान करें</string>
     <string name="starttracking">
 ट्रैकिंग शुरू करें</string>
-    <string name="location">आपकी स्थिति</string>
+    <string name="location">कामाचे स्थान</string>
     <string name="jobtitle">
 नौकरी का शीर्षक दर्ज करें</string>
     <string name="jobdetails">
@@ -111,6 +117,15 @@
     <string name="review">
 समीक्षा</string>
     <string name="jobstats">काम स्थिति</string>
+
+
+    <string name="paymentStatus">भुगतान की स्थिति</string>
+    <string name="alljobs">तैनात कार्य</string>
+    <string name="refrename">
+रेफ़रल दर्ज करें</string>
+    <string name="refcode">
+रेफरल पर्सन मोबाइल नंबर डालें</string>
+
 
   <!--  <string name="newuser">?????</string>
 -->

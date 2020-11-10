@@ -3,13 +3,16 @@ package com.example.labourmangement;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.WindowManager;
+import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.example.labourmangement.Admin.MainActivity;
 import com.example.labourmangement.Admin.UpdateMain;
@@ -17,6 +20,7 @@ import com.example.labourmangement.Admin.UpdateMain;
 public class SplashScreen extends AppCompatActivity {
 
     private boolean isFirstAnimation = false;
+    TextView shantal;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 /*
@@ -35,7 +39,13 @@ public class SplashScreen extends AppCompatActivity {
         final Animation translateScale = AnimationUtils.loadAnimation(this, R.anim.translate_scale);
 
         final ImageView imageView = findViewById(R.id.ivLogo);
-
+shantal=findViewById(R.id.shantal);
+        Animation anim = new AlphaAnimation(0.0f, 1.0f);
+        anim.setDuration(300); //You can manage the blinking time with this parameter
+        anim.setStartOffset(10);
+        anim.setRepeatMode(Animation.REVERSE);
+        anim.setRepeatCount(Animation.INFINITE);
+        shantal.startAnimation(anim);
 
         translateScale.setAnimationListener(new Animation.AnimationListener() {
             @Override
@@ -101,18 +111,5 @@ public class SplashScreen extends AppCompatActivity {
         finish();
     }
 
-  /*  private void StartAnimations() {
-        Animation anim = AnimationUtils.loadAnimation(this, R.anim.alpha);
-        anim.reset();
-        LinearLayout l=(LinearLayout) findViewById(R.id.lin_lay);
-        l.clearAnimation();
-        l.startAnimation(anim);
 
-        anim = AnimationUtils.loadAnimation(this, R.anim.translate);
-        anim.reset();
-        ImageView iv = (ImageView) findViewById(R.id.logo);
-        iv.clearAnimation();
-        iv.startAnimation(anim);
-
-    }*/
 }

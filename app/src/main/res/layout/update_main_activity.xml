@@ -15,12 +15,11 @@
             android:orientation="horizontal"
             android:layout_margin="@dimen/_5sdp"
             android:layout_height="wrap_content">
-            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+            <Spinner
                 android:layout_width="wrap_content"
-                android:text="Select Language"
                 android:gravity="center"
                 android:popupBackground="#3ab9da"
-                android:textColor="@color/white"
+                app:hintTextAppearance="@style/CustomTextAppearance2"
                 android:textAlignment="center"
                 android:layout_height="match_parent"
                 android:id="@+id/spin_language"/>
@@ -28,12 +27,12 @@
 
         <ImageView
                 android:id="@+id/shareApp"
-                android:layout_width="@dimen/_24sdp"
-                android:layout_height="match_parent"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
                 android:layout_alignParentRight="true"
-                android:layout_margin="@dimen/_10sdp"
-                app:srcCompat="@drawable/ic_share_white"
-                tools:ignore="VectorDrawableCompat" />
+            android:layout_margin="@dimen/_10sdp"
+                android:background="@drawable/sshare1"
+                />
 
 
         <LinearLayout
@@ -105,7 +104,7 @@
                             android:layout_below="@id/btnprofile"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="@dimen/_5sdp"
-                            android:text="Contractor"
+                            android:text="@string/contractormain"
                             android:textAllCaps="true"
                             android:textStyle="bold"
                             android:textColor="@color/fontcolor1"
@@ -142,7 +141,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/btnjobpost"
-                            android:text="Labourer"
+                            android:text="@string/labormain"
                             android:textAllCaps="true"
                             android:textStyle="bold"
                             android:layout_marginTop="@dimen/_5sdp"
@@ -199,7 +198,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/btnconfirmation"
-                            android:text="Architect"
+                            android:text="@string/architectmain"
                             android:textAllCaps="true"
                             android:textStyle="bold"
 
@@ -209,43 +208,7 @@
                             android:layout_marginTop="@dimen/_5sdp"
                             /></RelativeLayout>
                 </androidx.cardview.widget.CardView>
-                <!--  <androidx.cardview.widget.CardView
-                      android:layout_width="0dp"
-                      android:layout_height="match_parent"
-                      android:layout_margin="@dimen/_10sdp"
-                      app:cardElevation="@dimen/_15sdp"
-                      app:cardCornerRadius="@dimen/_25sdp"
-                      app:cardBackgroundColor="@color/background"
-                      android:layout_weight="1">
 
-                      <RelativeLayout
-                          android:layout_width="match_parent"
-                          android:layout_height="match_parent">
-                          <ImageView
-                              android:id="@+id/btnlivetracklabor"
-                              android:layout_width="@dimen/_70sdp"
-                              android:layout_height="@dimen/_70sdp"
-                              android:layout_centerHorizontal="true"
-                              android:layout_marginTop="@dimen/_10sdp"
-                              app:srcCompat="@drawable/tracking1"
-                              android:padding="@dimen/_5sdp"
-                              tools:ignore="VectorDrawableCompat" />
-
-
-                          <TextView
-                              android:id="@+id/textView112"
-                              android:layout_width="wrap_content"
-                              android:layout_height="wrap_content"
-                              android:layout_below="@id/btnlivetracklabor"
-                              android:layout_marginTop="@dimen/_10sdp"
-                              android:text="Track Labor"
-                              android:layout_centerHorizontal="true"
-                              android:textAllCaps="false"
-                              android:textColor="@color/fontcolor1"
-                              android:textSize="@dimen/_15sdp"
-                              />
-
-                      </RelativeLayout></androidx.cardview.widget.CardView>-->
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -274,7 +237,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/btnlivetracklabor"
-                            android:text="Engineer"
+                            android:text="@string/engineermain"
                             android:textAllCaps="true"
                             android:textStyle="bold"
 
@@ -333,7 +296,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/btnwages"
-                            android:text="Owner"
+                            android:text="@string/owenermain"
                             android:textAllCaps="true"
                             android:textStyle="bold"
 
@@ -371,7 +334,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/paystatus"
-                            android:text="Developer"
+                            android:text="@string/developermain"
                             android:textAllCaps="true"
                             android:textStyle="bold"
                             android:layout_marginTop="@dimen/_15sdp"

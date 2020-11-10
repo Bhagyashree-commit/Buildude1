@@ -23,11 +23,9 @@ public class OpenWebsite extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_about_us);
         ProgressDialog();
-        getSupportActionBar().hide();
+//        getSupportActionBar().hide();
 
         WebView webView = (WebView) findViewById(R.id.webView);
-
-
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         webView.setWebViewClient(new WebViewClient());

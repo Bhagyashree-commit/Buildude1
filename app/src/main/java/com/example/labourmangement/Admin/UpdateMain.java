@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.preference.PreferenceManager;
 import android.util.DisplayMetrics;
 import android.view.Menu;
@@ -58,11 +59,11 @@ public class UpdateMain extends AppCompatActivity {
     LinearLayout openLink;
     //Spinner langauge;
     ArrayAdapter<String> spinnerArrayAdapter;
-
+Spinner langspinner;
 
     Locale myLocale;
     String currentLanguage = "mar", currentLang;
-
+    public static int backPressed = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,9 +71,9 @@ public class UpdateMain extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.update_main_activity);
 
-        getSupportActionBar().hide();
 
         List<String> list = new ArrayList<String>();
+        list.add("Select Language");
         list.add("English");
         list.add("Hindi");
         list.add("Marathi");
@@ -91,7 +92,7 @@ public class UpdateMain extends AppCompatActivity {
         reldeveloper = findViewById(R.id.reldeveloper);
         relengineer = findViewById(R.id.relengineer);
 
-        MaterialBetterSpinner langspinner = findViewById(R.id.spin_language);
+         langspinner = findViewById(R.id.spin_language);
         shareApp = findViewById(R.id.shareApp);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, list);
@@ -135,10 +136,6 @@ public class UpdateMain extends AppCompatActivity {
         animContractor.startAnimation(inFromLeftAnimation());
         animOwner.startAnimation(inFromLeftAnimation());
         animArchitect.startAnimation(inFromRightAnimation());
-      /*  overridePendingTransition(0,0);
-        View relativeLayout=findViewById(R.id.login_container);
-        Animation animation= AnimationUtils.loadAnimation(this,android.R.anim.fade_in);
-        relativeLayout.startAnimation(animation);*/
 
         relContractor.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -251,11 +248,30 @@ public class UpdateMain extends AppCompatActivity {
             Configuration conf = res.getConfiguration();
             conf.locale = myLocale;
             res.updateConfiguration(conf, dm);
-            Intent refresh = new Intent(this, MainActivity.class);
+            Intent refresh = new Intent(this, UpdateMain.class);
             refresh.putExtra(currentLang, localeName);
             startActivity(refresh);
         } else {
             Toast.makeText(UpdateMain.this, "Language already selected!", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        backPressed = backPressed + 1;
+        if (backPressed == 1) {
+            Toast.makeText(UpdateMain.this, "Press back again to exit", Toast.LENGTH_SHORT).show();
+            new CountDownTimer(5000, 1000) { // adjust the milli seconds here
+                public void onTick(long millisUntilFinished) {
+                }
+                public void onFinish() { backPressed = 0;
+                }
+            }.start();
+        }
+        if (backPressed == 2) {
+            backPressed = 0;
+            finishAffinity();
+            android.os.Process.killProcess(android.os.Process.myPid());
         }
     }
 }

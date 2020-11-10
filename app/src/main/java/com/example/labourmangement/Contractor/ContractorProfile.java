@@ -1,6 +1,7 @@
 package com.example.labourmangement.Contractor;
 
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.widget.TextViewKt;
 
@@ -70,9 +71,9 @@ public class ContractorProfile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contractor_profile);
 
-        getSupportActionBar().setTitle("CONTRACTOR DASHBOARD");
-        getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.gradient));
-
+        /*getSupportActionBar().setTitle("CONTRACTOR DASHBOARD");
+        getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.color.blue_900));
+*/
         btn_profile=(ImageView)findViewById(R.id.btnprofile);
         btn_confirmation=(ImageView)findViewById(R.id.btnconfirmation);
         btn_joboffer=(ImageView)findViewById(R.id.btnjobpost);
@@ -80,7 +81,7 @@ public class ContractorProfile extends AppCompatActivity {
         btn_tracking=(ImageView)findViewById(R.id.btnlivetracklabor);
         btn_wages=(ImageView)findViewById(R.id.btnwages);
         btnalljobs=(ImageView)findViewById(R.id.alljobs);
-        btnpaystatus=(ImageView)findViewById(R.id.paystatus);
+        btnpaystatus=(ImageView)findViewById(R.id.paystatus1);
         contractorname=(TextView)findViewById(R.id.textfetchusernamecontractor);
         contractorid=(TextView)findViewById(R.id.textfetchuserIdcontractor);
 
@@ -327,7 +328,7 @@ public class ContractorProfile extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
-    @Override
+   /* @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
             finish();
@@ -381,5 +382,5 @@ public class ContractorProfile extends AppCompatActivity {
                 break;
         }
         return super.onOptionsItemSelected(item);
-    }
+    }*/
 }

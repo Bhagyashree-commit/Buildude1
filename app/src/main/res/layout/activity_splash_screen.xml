@@ -27,9 +27,9 @@
     <TextView
      android:gravity="center"
         android:textStyle="bold"
-        android:textColor="@color/red_900"
-        android:textSize="@dimen/_25sdp"
-        android:text="Welcome To"
+        android:textColor="@color/orange_800"
+        android:textSize="@dimen/_15sdp"
+        android:text="CONCEPTUALISED BY"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
@@ -38,6 +38,7 @@
         android:text="Shantal Consulting Engineers"
         android:textStyle="bold"
         android:textAllCaps="true"
+        android:id="@+id/shantal"
         android:singleLine="true"
         android:textColor="@color/white"
         android:textSize="@dimen/_20sdp"

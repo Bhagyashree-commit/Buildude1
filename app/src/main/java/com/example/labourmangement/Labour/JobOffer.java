@@ -270,41 +270,7 @@ CustomLoader loader;
         if (item.getItemId() == android.R.id.home) {
             finish();
         }
-        switch (item.getItemId()) {
-            case R.id.eng:
-                String languageToLoad = "en"; // your language
-                Locale locale = new Locale(languageToLoad);
-                Locale.setDefault(locale);
-                Configuration config = new Configuration();
-                config.locale = locale;
-                getBaseContext().getResources().updateConfiguration(config,
-                        getBaseContext().getResources().getDisplayMetrics());
-                this.setContentView(R.layout.activity_job_offer);
-                break;
-            case R.id.hn:
-                languageToLoad = "hi"; // your language
-                locale = new Locale(languageToLoad);
-                Locale.setDefault(locale);
-                config = new Configuration();
-                config.locale = locale;
-                getBaseContext().getResources().updateConfiguration(config,
-                        getBaseContext().getResources().getDisplayMetrics());
-                this.setContentView(R.layout.activity_job_offer);
-                break;
-            case R.id.mar:
-                languageToLoad = "mar"; // your language
-                locale = new Locale(languageToLoad);
-                Locale.setDefault(locale);
-                config = new Configuration();
-                config.locale = locale;
-                getBaseContext().getResources().updateConfiguration(config,
-                        getBaseContext().getResources().getDisplayMetrics());
-                this.setContentView(R.layout.activity_job_offer);
-                break;
 
-            default:
-                break;
-        }
         return super.onOptionsItemSelected(item);
     }
 

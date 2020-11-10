@@ -273,30 +273,7 @@ android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                  <!--  <ImageButton
-                        android:id="@+id/btnremark"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="10dp"
-                        app:srcCompat="@drawable/remark"
-                        android:padding="5dp"
-                        tools:ignore="VectorDrawableCompat"
 
-                        />
-
-                    <TextView
-                        android:id="@+id/textView11"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/btnremark"
-                        android:layout_marginTop="10dp"
-                        android:text="Remark"
-                        android:layout_centerHorizontal="true"
-                        android:textAllCaps="false"
-                        android:textColor="#000"
-                        android:textSize="15dp"
-                        />-->
                     <ImageView
                         android:id="@+id/btngetwages"
                         android:layout_width="@dimen/_70sdp"

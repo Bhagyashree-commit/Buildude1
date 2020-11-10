@@ -266,24 +266,7 @@ public class PostJObArchitech extends AppCompatActivity {
         if (item.getItemId() == android.R.id.home) {
             finish();
         }
-        switch (item.getItemId()) {
-            case R.id.share:
-                Intent shareIntent = new Intent(Intent.ACTION_SEND);
-                shareIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                shareIntent.setType("text/plain");
-                shareIntent.putExtra(android.content.Intent.EXTRA_TEXT, "Hey, download this app!,https://drive.google.com/file/d/1qnIAtbiBw4St_HKagdUE5-2-VFlfLlOc/view?usp=sharing");
-                startActivity(shareIntent);
 
-                break;
-
-            case R.id.viewjob:
-                Intent i3=new Intent(PostJObArchitech.this, AllJobs.class);
-                startActivity(i3);
-                break;
-
-            default:
-                break;
-        }
         return super.onOptionsItemSelected(item);
     }
 

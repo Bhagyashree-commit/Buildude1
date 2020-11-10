@@ -58,12 +58,12 @@ public class PostJobs extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_post_jobs);
-        getSupportActionBar().setTitle("Job Posts");
+      /*  getSupportActionBar().setTitle("Job Posts");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.gradient));
-
+*/
         etjobtitle=(EditText)findViewById(R.id.editjobttitle);
         etjobdetails=(EditText)findViewById(R.id.editjobdetails);
         etjobwages=(EditText)findViewById(R.id.editjobwages);
@@ -273,56 +273,7 @@ etjobtitle.setOnFocusChangeListener(new View.OnFocusChangeListener() {
         if (item.getItemId() == android.R.id.home) {
             finish();
         }
-        switch (item.getItemId()) {
-            case R.id.eng:
-                String languageToLoad = "en"; // your language
-                Locale locale = new Locale(languageToLoad);
-                Locale.setDefault(locale);
-                Configuration config = new Configuration();
-                config.locale = locale;
-                getBaseContext().getResources().updateConfiguration(config,
-                        getBaseContext().getResources().getDisplayMetrics());
-                this.setContentView(R.layout.activity_post_jobs);
-                break;
-            case R.id.hn:
-                languageToLoad = "hi"; // your language
-                locale = new Locale(languageToLoad);
-                Locale.setDefault(locale);
-                config = new Configuration();
-                config.locale = locale;
-                getBaseContext().getResources().updateConfiguration(config,
-                        getBaseContext().getResources().getDisplayMetrics());
-                this.setContentView(R.layout.activity_post_jobs);
-                break;
-            case R.id.mar:
-                languageToLoad = "mar"; // your language
-                locale = new Locale(languageToLoad);
-                Locale.setDefault(locale);
-                config = new Configuration();
-                config.locale = locale;
-                getBaseContext().getResources().updateConfiguration(config,
-                        getBaseContext().getResources().getDisplayMetrics());
-                this.setContentView(R.layout.activity_post_jobs);
-                break;
 
-            case R.id.share:
-                Intent shareIntent = new Intent(Intent.ACTION_SEND);
-                shareIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                shareIntent.setType("text/plain");
-                shareIntent.putExtra(android.content.Intent.EXTRA_TEXT, "Hey, download this app!,https://drive.google.com/file/d/1qnIAtbiBw4St_HKagdUE5-2-VFlfLlOc/view?usp=sharing");
-                startActivity(shareIntent);
-
-                break;
-
-            case R.id.viewjob:
-                Intent i3=new Intent(PostJobs.this,AllJobs.class);
-                startActivity(i3);
-                break;
-
-
-            default:
-                break;
-        }
         return super.onOptionsItemSelected(item);
     }
 }

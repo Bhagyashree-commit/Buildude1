@@ -45,6 +45,13 @@
     <string name="Hind">Hindi</string>
     <string name="preferdlag">Select Language</string>
 
+    <string name="contractormain">CONTRACTOR</string>
+    <string name="labormain">LABOURER</string>
+    <string name="architectmain">ARCHITECT</string>
+    <string name="engineermain">ENGINEER</string>
+    <string name="developermain">DEVELOPER</string>
+    <string name="owenermain">OWNER</string>
+
 
     <string name="title_activity_map_tracking">Map Route Tracking</string>
     <string name="track_path_on_map">Walk and route your path on map</string>
@@ -83,7 +90,7 @@
     <string name="appreject">Approve/Reject</string>
     <string name="tracklabor">Track Labor</string>
     <string name="registername">Welcome</string>
-    <string name="wages">Payment :</string>
+    <string name="wages">Payment </string>
 
     <string name="job">Job</string>
     <string name="labourname">Labor Name: </string>

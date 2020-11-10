@@ -41,7 +41,16 @@
 आपले स्वागत आहे </string>
     <string name="presentedby">सादरकर्ते</string>
 
-
+    <string name="contractormain">
+कंत्राटदार</string>
+    <string name="labormain">कामगार</string>
+    <string name="architectmain">
+आर्किटेक्चर</string>
+    <string name="engineermain">
+इंजिनियर</string>
+    <string name="developermain">विकसक
+</string>
+    <string name="owenermain">मालक</string>
 
 
     <string name="click">
@@ -111,4 +120,11 @@
 नोकरीची ऑफर</string>
     <string name="review">पुनरावलोकन</string>
     <string name="jobstats">नोकरी स्थिति</string>
+    <string name="paymentStatus">पैसे भरल्याची स्थिती</string>
+    <string name="alljobs">
+पोस्ट केलेल्या नोकर्‍या</string>
+    <string name="refrename">
+रेफरल प्रविष्ट करा</string>
+    <string name="refcode">
+रेफरल व्यक्ती मोबाईल क्रमांक प्रविष्ट करा</string>
 </resources>

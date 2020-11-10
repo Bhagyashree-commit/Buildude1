@@ -56,10 +56,10 @@ public class PaymentStatusContractor extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment_status_contractor);
 
-        getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.gradient));
-        getSupportActionBar().setTitle("Payment Status");
+       /* getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.gradient));
+        getSupportActionBar().setTitle("Review");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);*/
 
         rv_paymentstatus = (RecyclerView) findViewById(R.id.RV_CpaymentStatus);
         rv_paymentstatus.setHasFixedSize(true);
@@ -73,7 +73,7 @@ public class PaymentStatusContractor extends AppCompatActivity {
       //  loader= new loader(PaymentStatusContractor.this);
         loader = new CustomLoader(this, android.R.style.Theme_Translucent_NoTitleBar_Fullscreen);
 
-        getRequest1();
+       // getRequest1();
     }
 
     public void getRequest1() {
@@ -215,93 +215,7 @@ public class PaymentStatusContractor extends AppCompatActivity {
         if (item.getItemId() == android.R.id.home) {
             finish();
         }
-        switch (item.getItemId()) {
-            case R.id.eng:
-                String languageToLoad = "en"; // your language
-                Locale locale = new Locale(languageToLoad);
-                Locale.setDefault(locale);
-                Configuration config = new Configuration();
-                config.locale = locale;
-                getBaseContext().getResources().updateConfiguration(config,
-                        getBaseContext().getResources().getDisplayMetrics());
-                this.setContentView(R.layout.activity_wages_request);
-                break;
-            case R.id.hn:
-                languageToLoad = "hi"; // your language
-                locale = new Locale(languageToLoad);
-                Locale.setDefault(locale);
-                config = new Configuration();
-                config.locale = locale;
-                getBaseContext().getResources().updateConfiguration(config,
-                        getBaseContext().getResources().getDisplayMetrics());
-                this.setContentView(R.layout.activity_wages_request);
-                break;
-            case R.id.mar:
-                languageToLoad = "mar"; // your language
-                locale = new Locale(languageToLoad);
-                Locale.setDefault(locale);
-                config = new Configuration();
-                config.locale = locale;
-                getBaseContext().getResources().updateConfiguration(config,
-                        getBaseContext().getResources().getDisplayMetrics());
-                this.setContentView(R.layout.activity_wages_request);
-                break;
-            case R.id.share:
-                Intent shareIntent = new Intent(Intent.ACTION_SEND);
-                shareIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                shareIntent.setType("text/plain");
-                shareIntent.putExtra(android.content.Intent.EXTRA_TEXT, "Hey, download this app!,https://drive.google.com/file/d/1qnIAtbiBw4St_HKagdUE5-2-VFlfLlOc/view?usp=sharing");
-                startActivity(shareIntent);
 
-                break;
-
-            case R.id.viewjob:
-                Intent i3=new Intent(PaymentStatusContractor.this,AllJobs.class);
-                startActivity(i3);
-                break;
-
-
-          /*  case R.id.logout:
-                AlertDialog.Builder alertDialog2 = new AlertDialog.Builder(LabourDashboard.this);
-                alertDialog2.setTitle("Confirm Logout...");
-                alertDialog2.setMessage("Are you sure! you want Logout?");
-
-                alertDialog2.setPositiveButton("YES", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-
-                        session.logoutUser();
-
-                        SharedPreferences.Editor editor = getPreferences(MODE_PRIVATE).edit();
-                        editor.clear();
-                        editor.commit();
-                        Intent broadcastIntent = new Intent();
-                        broadcastIntent.setAction("com.package.ACTION_LOGOUT");
-                        sendBroadcast(broadcastIntent);
-
-                        Intent intent1 = new Intent(LabourDashboard.this, MainActivity.class);
-                        intent1.putExtra("finish", true);
-                        intent1.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                        startActivity(intent1);
-
-                    }
-                });
-
-                // Setting Negative "NO" Button
-                alertDialog2.setNegativeButton("NO", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        // Write your code here to invoke NO event
-                        Toast.makeText(getApplicationContext(), "You clicked on NO", Toast.LENGTH_SHORT).show();
-                        dialog.cancel();
-                    }
-                });
-
-                // Showing Alert Message
-                alertDialog2.show();
-
-                return true;*/
-            default:
-                break;
-        }
         return super.onOptionsItemSelected(item);
     }
 }
